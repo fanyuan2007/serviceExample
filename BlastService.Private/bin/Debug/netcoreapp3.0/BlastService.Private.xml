@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlastService.Private</name>
+    </assembly>
+    <members>
+        <member name="M:BlastService.Private.Controllers.ProjectController.GetProjects">
+            <summary>
+            Get all projects.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Controllers.ProjectController.GetProject(System.Guid)">
+            <summary>
+            Get a project given its id
+            </summary>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Controllers.ProjectController.GetPatterns(System.Guid)">
+            <summary>
+            Get all patterns for project given its id
+            </summary>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Controllers.ProjectController.GetPattern(System.Guid,System.Guid)">
+            <summary>
+            Get a pattern for a project given its id
+            </summary>
+            <param name="projectId"></param>
+            <param name="patternId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Controllers.ProjectController.AddProject(BlastService.Private.ModelContract.ProjectRequest)">
+            <summary>
+            Add a new project.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Controllers.ProjectController.AddPattern(System.Guid,BlastService.Private.ModelContract.PatternRequest)">
+            <summary>
+            Add a new pattern for a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Controllers.ProjectController.DeleteProject(System.Guid)">
+            <summary>
+            Deletes an entire project.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Controllers.ProjectResponse.LocalTransformation">
+            <summary>
+            JSON string
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.ChargeIntervalDb.Hole">
+            <summary>
+            The Charging table has a FK constrait to Holes table
+            No need to set this as it's used for table relationships
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.Models.HoleDb.#ctor(BlastService.Private.ModelContract.HoleRequest)">
+            Exceptions:
+            Request -> Database
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.DesignCollar">
+            <summary>
+            Force SQL column type to be geography for storing 3D coordinates.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.DesignToe">
+            <summary>
+            Force SQL column type to be geography for storing 3D coordinates
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.DesignTrace">
+            <summary>
+            Force SQL column type to be geography for storing a list of 3D coordinates.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.ActualTrace">
+            <summary>
+            Force SQL column type to be geography for storing a list of 3D coordinates.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.ActualCollar">
+            <summary>
+            Force SQL column type to be geography for storing 3D coordinates.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.ActualToe">
+            <summary>
+            Force SQL column type to be geography for storing 3D coordinates
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.DrillPattern">
+            <summary>
+            The Holes table has a FK constraint to Patterns table
+            No need to set this as it's used for table relationships
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.BlastPatternId">
+            <summary>
+            The Holes table has a FK constraint to Patterns table
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.BlastPattern">
+            <summary>
+            No need to set this as it's used for table relationships
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.ActualFragmentId">
+            <summary>
+            The Holes table has a FK constraint to Fragmentation table
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.HoleDb.ChargeProfile">
+            <summary>
+            The Charging table has a FK constraints to Holes table
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.Models.HoleDb.HasActualStructure">
+            <summary>
+            A hole contains actual hole structure if and only if azimuth, dip, length, collar, and toe all exist.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Models.PatternDb.#ctor(System.Guid,BlastService.Private.ModelContract.PatternRequest)">
+            Exceptions:
+            Request -> Database
+            ArgumentException
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.DesignBoundary">
+            <summary>
+            Force SQL column type to be geography for storing a list of 3D geometries.
+            Need to remove this tag after migrating to Postgre
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.MetricScores">
+            <summary>
+            Metric Scores is a list saved as JSON format
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.ActualBoundary">
+            <summary>
+            Force SQL column type to be geography for storing a list of 3D geometries.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.DrillHoles">
+            The Holes table has a FK constraint to Patterns table
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.BlastHoles">
+            The Holes table has a FK constraint to Patterns table
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.Project">
+            <summary>
+            No need to set this as it's used for table relationships
+            The Patterns table has a FK constraint to Project table
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.ActualFragmentId">
+            <summary>
+            The Patterns table has a FK constraint to Fragmentation table
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.Models.PatternDb.DesignFragmentId">
+            <summary>
+            The Patterns table has a FK constraint to Fragmentation table
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.Models.PatternDb.HasHoleLength">
+            <summary>
+            A pattern contains hole length if and only if both TotalHoleLength and AverageHoleLength exist
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.Models.PatternDb.HasScoring">
+            <summary>
+            A pattern contains scoring if and only if both TotalScore and MetricScores exist
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BlastService.Private.Models.PatternResponse.MetricScores">
+            <summary>
+            JSON string
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.Models.ChargeProfileType.Actual">
+            <summary>
+            Actual Charging Profile
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.Models.ChargeProfileType.Design">
+            <summary>
+            Design Charging Profile
+            </summary>
+        </member>
+    </members>
+</doc>

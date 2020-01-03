@@ -1,0 +1,37 @@
+{
+  "nameBasedProperties": {
+    "baseProperties": {
+      "id": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+      "createdAt": "2019-12-10T22:01:44.622Z",
+      "updatedAt": "2019-12-10T22:01:44.622Z"
+    },
+    "name": "test project property name"
+  },
+  "description": "testing project",
+  "unit": "Metric",
+  "timeZone": {
+    "offsetHours": -8,
+    "offsetMinutes": 0,
+    "idName": "Pacific Standard Time",
+    "isDaylightSavingTime": true
+  },
+  "localTransformation": {
+    "translation": {
+      "east": 10,
+      "north": 10,
+      "elev": 10
+    },
+    "rotation": {
+      "east": 10,
+      "north": 20,
+      "elev": 10
+    },
+    "scaling": {
+      "east": 10,
+      "north": 10,
+      "elev": 10
+    }
+  },
+  "mapping": "EastElevNorth"
+}
+

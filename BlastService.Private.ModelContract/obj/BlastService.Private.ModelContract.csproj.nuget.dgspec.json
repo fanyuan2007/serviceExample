@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\HxM.MinePlanBlastPrivateService\\BlastService.Private.ModelContract\\BlastService.Private.ModelContract.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\HxM.MinePlanBlastPrivateService\\BlastService.Private.ModelContract\\BlastService.Private.ModelContract.csproj": {
+      "version": "0.3.5-prerelease",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\HxM.MinePlanBlastPrivateService\\BlastService.Private.ModelContract\\BlastService.Private.ModelContract.csproj",
+        "projectName": "BlastService.Private.ModelContract",
+        "projectPath": "D:\\Dev\\HxM.MinePlanBlastPrivateService\\BlastService.Private.ModelContract\\BlastService.Private.ModelContract.csproj",
+        "packagesPath": "C:\\Users\\ZHE\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\HxM.MinePlanBlastPrivateService\\BlastService.Private.ModelContract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ZHE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard1.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://api.nuget.org/v3/index.json": {},
+          "http://atussrvapp15:8080/api/odata": {}
+        },
+        "frameworks": {
+          "netstandard1.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard1.2": {
+          "dependencies": {
+            "DisableDateTimeNow": {
+              "target": "Package",
+              "version": "[1.0.5883.39470, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[1.6.1, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

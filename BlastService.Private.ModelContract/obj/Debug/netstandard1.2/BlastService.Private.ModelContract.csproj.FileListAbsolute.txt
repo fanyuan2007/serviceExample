@@ -1,0 +1,9 @@
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\bin\Debug\netstandard1.2\BlastService.Private.ModelContract.deps.json
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\bin\Debug\netstandard1.2\BlastService.Private.ModelContract.dll
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\bin\Debug\netstandard1.2\BlastService.Private.ModelContract.pdb
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\bin\Debug\netstandard1.2\BlastService.Private.ModelContract.xml
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\obj\Debug\netstandard1.2\BlastService.Private.ModelContract.csprojAssemblyReference.cache
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\obj\Debug\netstandard1.2\BlastService.Private.ModelContract.AssemblyInfoInputs.cache
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\obj\Debug\netstandard1.2\BlastService.Private.ModelContract.AssemblyInfo.cs
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\obj\Debug\netstandard1.2\BlastService.Private.ModelContract.dll
+D:\Dev\HxM.MinePlanBlastPrivateService\BlastService.Private.ModelContract\obj\Debug\netstandard1.2\BlastService.Private.ModelContract.pdb

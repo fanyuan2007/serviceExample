@@ -1,0 +1,42 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": true,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:61902",
+      "sslPort": 44352
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchUrl": "api/v0.3/pattern",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "BlastService.Public": {
+      "commandName": "Project",
+      "launchUrl": "api/v0.3",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:61902"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/v0.3",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https://+:443;http://+:80",
+        "ASPNETCORE_HTTPS_PORT": "61902"
+      },
+      "httpPort": 61624,
+      "useSSL": true,
+      "sslPort": 44353
+    },
+    "Azure Dev Spaces": {
+      "commandName": "AzureDevSpaces"
+    }
+  }
+}

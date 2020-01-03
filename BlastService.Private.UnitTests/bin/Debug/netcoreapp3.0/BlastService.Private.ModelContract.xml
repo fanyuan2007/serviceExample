@@ -1,0 +1,1397 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlastService.Private.ModelContract</name>
+    </assembly>
+    <members>
+        <member name="T:BlastService.Private.ModelContract.BaseProperty">
+            <summary>
+            Base class for all properties
+            Including:
+                Blast Project
+                Pattern
+                Hole
+                Charging Interval
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.BaseProperty.Id">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.BaseProperty.CreatedAt">
+            <summary>
+            Required. Must not be later than the UpdatedAt date.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.BaseProperty.UpdatedAt">
+            <summary>
+            Required. Must not be earlier than the CreatedAt date.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.HoleRequest">
+            <summary>
+            This class defines DTO properties for a Blast Hole
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.NameBasedProperties">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DrillPatternId">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.BlastPatternId">
+            <summary>
+            Id of the Blast Pattern the Hole belongs to
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.AreaOfInfluence">
+            <summary>
+            Required.
+            Must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.VolumeOfInfluence">
+            <summary>
+            Required.
+            Must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.HoleState">
+            <summary>
+            Required.
+            Must not be null, empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.HoleUsage">
+            <summary>
+            Required.
+            Must not be null, empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.LayoutType">
+            <summary>
+            Required
+            Must not be null, empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignDiameter">
+            <summary>
+            Required.
+            Must be greater than or equal to 0.0.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignBenchCollar">
+            <summary>
+            Optional.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignBenchToe">
+            <summary>
+            Optional.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignSubDrill">
+            <summary>
+            Required.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.Accuracy">
+            <summary>
+            Optional.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.LengthAccuracy">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignChargeInfo">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ActualChargeInfo">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ChargeTemplateName">
+            <summary>
+            Optional.
+            If provided, must not be empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.FragmentSize">
+            <summary>
+            Optional. If provided, must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.PowderFactor">
+            <summary>
+            Optional. If provided, must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.GeologyCode">
+            <summary>
+            Optional. If provided, must not be empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ValidationState">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ActualFragmentation">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignChargeProfile">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ActualChargeProfile">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignHole">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ActualHole">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.DesignTrace">
+            <summary>
+            Optional
+            If not null, must have at least two coordinates.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleRequest.ActualTrace">
+            <summary>
+            Optional
+            If not null, must have at least two coordinates.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.NamedBaseProperty">
+            <summary>
+            Base class for all properties with Names
+            Including:
+                Blast Project
+                Pattern
+                Hole
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.NamedBaseProperty.BaseProperties">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.NamedBaseProperty.Name">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.PatternRequest">
+            <summary>
+            This class defines DTO properties for a Blast Pattern
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.NameBasedProperties">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Stage">
+            <summary>
+            Required.
+            Must not be null, empty or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Description">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.FaceAngle">
+            <summary>
+            Required.
+            Must be between -90.0 and 90.0 inclusive.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.SubDrill">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Bench">
+            <summary>
+            Optional.
+            If provided, must not be empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Pit">
+            <summary>
+            Optional
+            If provided, must not be empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Phase">
+            <summary>
+            Optional
+            If provided, must not be empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Area">
+            <summary>
+            Optional
+            If provided, must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Volume">
+            <summary>
+            Optional
+            If provided, must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.HoleLength">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.HoleUsage">
+            <summary>
+            Usage of Holes of this Pattern
+            Required
+            Must not be null, empty or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Scoring">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.GeologyCode">
+            <summary>
+            Optional.
+            If provided, must not be empty or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.PatternType">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Purpose">
+            <summary>
+            Required.
+            Must not be null, empty, or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.PatternTemplateName">
+            <summary>
+            Optional.
+            If provided, must not be empty or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.ChargingTemplateName">
+            <summary>
+            Optional.
+            If provided, must not be empty or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.IsElectronic">
+            <summary>
+            Determines whether this Pattern is electirc blast or not
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.MaxHoleFired">
+            <summary>
+            Optional
+            If provided, must be greater than or equal to 0.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.MaxWeightFired">
+            <summary>
+            Optional
+            If provided, must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.PowderFactor">
+            <summary>
+            Required
+            Must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.RockFactor">
+            <summary>
+            Required
+            Must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.RockSG">
+            <summary>
+            Required
+            Must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.ValidationState">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.DesignFragmentation">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.ActualFragmentation">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.DesignBoundary">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.ActualBoundary">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PatternRequest.Holes">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.ProjectRequest">
+            <summary>
+            A request for a Project.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ProjectRequest.NameBasedProperties">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ProjectRequest.Description">
+            <summary>
+            Required.
+            May be empty or whitespace.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ProjectRequest.Unit">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ProjectRequest.TimeZone">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ProjectRequest.LocalTransformation">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ProjectRequest.Mapping">
+            <summary>
+            Optional
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.ChargeInfo">
+            <summary>
+            Request for ChargeInfo.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInfo.Weight">
+            <summary>
+            Required
+            If weight is specified, thickness is a function of SG of explosive, hole diameter and weight.
+            Must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInfo.Thickness">
+            <summary>
+            Required
+            If thickness is specified, weight is a function of SG of explosive, hole diameter and thickness.
+            Must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.ChargeInterval">
+            <summary>
+            Request for ChargeInterval.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInterval.From">
+            <summary>
+            Required.
+            Must be greater than or equal to 0.0
+            Must not be greater than To.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInterval.To">
+            <summary>
+            Required
+            Must be greater than or equal to 0.0
+            Must not be smaller than From.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInterval.Consumable">
+            <summary>
+            Required
+            Must not be null, empty, or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInterval.Amount">
+            <summary>
+            Required
+            Must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ChargeInterval.Deck">
+            <summary>
+            Optional.
+            If provided, must not be whitespaces.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Fragmentation">
+            <summary>
+            Base class for DesignFragmentation and ActualFragmentation.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P10">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P20">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P30">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P40">
+            <summary>
+            At least one P-value must be non-null.
+            Optional. If present, value must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P50">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P60">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P70">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P80">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Fragmentation.P90">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.DesignFragmentation">
+            <summary>
+            Class representing DesignFragmentation.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.ActualFragmentation">
+            <summary>
+            Class representing ActualFragmentation.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.ActualFragmentation.TopSize">
+            <summary>
+            Optional. If present, value must be greater than 0.0
+            At least one P-value must be non-null, or TopSize.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.GPSCoordinate">
+            <summary>
+            This class defintes GPS Coordinate
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.GPSCoordinate.Latitude">
+            <summary>
+            Required.
+            Must be between -90.0 and 90.0, non-inclusive.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.GPSCoordinate.Longitude">
+            <summary>
+            Required.
+            Must be between -180.0 and 180.0, non-inclusive.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.GPSCoordinate.Elevation">
+            <summary>
+            Required.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.HoleLength">
+            <summary>
+            Request for HoleLength.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleLength.Total">
+            <summary>
+            Required.
+            Must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleLength.Average">
+            <summary>
+            Required.
+            Must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.HoleStructure">
+            <summary>
+            Request for a HoleStructure.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleStructure.Azimuth">
+            <summary>
+            Required.
+            Must be between 0.0 and 360.0 inclusive.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleStructure.Dip">
+            <summary>
+            Required.
+            Must be between -90.0 and 90.0 inclusive.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleStructure.Length">
+            <summary>
+            Required.
+            Must be greater than or equal to 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleStructure.Collar">
+            <summary>
+            Required.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.HoleStructure.Toe">
+            <summary>
+            Required.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.LocalTransformation">
+            <summary>
+            Request for a LocalTransformation.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.LocalTransformation.Translation">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.LocalTransformation.Rotation">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.LocalTransformation.Scaling">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.MeasurementUnit">
+            <summary>
+            Measurement unit used by the requests.
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.MeasurementUnit.Metric">
+            <summary>
+            Units are metric.
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.MeasurementUnit.Imperial">
+            <summary>
+            Units are imperial.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.MetricScore">
+            <summary>
+            Request for a MetricScore
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.MetricScore.Name">
+            <summary>
+            Required.
+            Must not be null, empty or only whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.MetricScore.Weight">
+            <summary>
+            Required.
+            Must be greater than 0.0
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.MetricScore.Score">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.PatternType">
+            <summary>
+            Type of Pattern Drill, Blast or Drill and Blast
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.PatternType.Drill">
+            <summary>
+            Only a Drill Pattern
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.PatternType.Blast">
+            <summary>
+            Only a Blast Pattern
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.PatternType.Both">
+            <summary>
+            Both a Drill and Blast Pattern
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.PolyGeom">
+            <summary>
+            This class defines a list of points
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.PolyGeom.PolyGeometry">
+            <summary>
+            The collection of GPS Coordinates that make up the PolyGeom.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Scoring">
+            <summary>
+            Request for Scoring.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Scoring.TotalScore">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Scoring.MetricScore">
+            <summary>
+            Required
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.UTCTimeZone">
+            <summary>
+            Request for a timezone offset.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.UTCTimeZone.OffsetHours">
+            <summary>
+            The UTC offset in hours.
+            Must be between -12 and 14 inclusive.
+            Required.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.UTCTimeZone.OffsetMinutes">
+            <summary>
+            The UTC offset in minutes
+            Must be between -59 and 59 inclusive.
+            Required
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.UTCTimeZone.IdName">
+            <summary>
+            This is the UTC TimeZone Name, e.g. Pacific Standard Time
+            Required. Must not be null, empty, or whitespaces.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.UTCTimeZone.IsDaylightSavingTime">
+            <summary>
+            Determines whether this UTC TimeZone is under daylight saving shift
+            Required
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Transformation">
+            <summary>
+            A Transformation request.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Transformation.East">
+            <summary>
+            Required.
+            Must be a valid double.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Transformation.North">
+            <summary>
+            Required.
+            Must be a valid double.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Transformation.Elev">
+            <summary>
+            Required.
+            Must be a valid double.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.ValidationState">
+            <summary>
+            Type of Validation State
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.ValidationState.Unvalidated">
+            <summary>
+            Not yet validated
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.ValidationState.Valid">
+            <summary>
+            Valid State
+            </summary>
+        </member>
+        <member name="F:BlastService.Private.ModelContract.ValidationState.Invalid">
+            <summary>
+            Invalid State
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.NodeResult">
+            <summary>
+            A result which may have one or more results attached to it.
+            Typically represents a class or structure.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.NodeResult.#ctor(System.String)">
+            <summary>
+            Creates a new NodeResult with a given name.
+            </summary>
+            <param name="objectName">The name of this node.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.NodeResult.AddResult(BlastService.Private.ModelContract.Validation.IValidatorResult)">
+            <summary>
+            Appends a new validation result to this node's list of results.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.NodeResult.ChildResults">
+            <summary>
+            Retrieves an enumeration of all the validation results added to this node.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.NodeResult.ParentResult">
+            <summary>
+            The node that is one level above this node.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.NodeResult.GetAllResultsAsList">
+            <summary>
+            Gets a list of all child results in the tree and flattens them into a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.NodeResult.RootResult">
+            <summary>
+            The top-level node. If there is no parent,
+            this is the top level node.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.NodeResult.ErrorCount">
+            <summary>
+            Gets the total number of errors in the children of this node.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.NodeResult.ObjectName">
+            <summary>
+            Gets the name of this node.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.NodeResult.Message">
+            <summary>
+            Gets the error message on this node.
+            Not valid for nodes
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.RequestValidator">
+            <summary>
+            A validator class that evaluates the validity of model contract request classes.
+            Can be set to break out early with a maximum limit on error count.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings)">
+            <summary>
+            Instantiates a new validator with a set of specific validators.
+            </summary>
+            <param name="settings">The validation settings to use.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidator.AddValidator(BlastService.Private.ModelContract.Validation.IValidator)">
+            <summary>
+            Adds a validator to this RequestValidator.
+            </summary>
+            <param name="validator"></param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidator.Validate(System.Object,BlastService.Private.ModelContract.Validation.IValidatorResult@,System.String)">
+            <summary>
+            Validates a single object, presumably a request.
+            Returns a list of errors discovered during validation.
+            </summary>
+            <param name="request">The request to validate.</param>
+            <param name="result">The validation result.</param>
+            <param name="resultName">The name to use for the result. 
+            Uses the typename of the request if null or empty.</param>
+            <returns>True if no errors were found. False otherwise.</returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidator.Validate(System.Object,BlastService.Private.ModelContract.Validation.IValidatorResult@)">
+            <summary>
+            Validates a single object, presumably a request.
+            </summary>
+            <param name="request">The request to validate.</param>
+            <param name="result">The validation result.</param>
+            <returns>True if no errors were found. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.RequestValidatorFactory">
+            <summary>
+            Factory for creating RequestValidator objects to specified parameters.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidatorFactory.CreateValidator(System.Int32)">
+            <summary>
+            Creates a RequestValidator with default validators.
+            </summary>
+            <param name="maxErrors">Maximum number of errors to halt on. Defaults to 10.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"/>
+            <returns>A RequestValidator with default validators.</returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidatorFactory.CreateValidator(System.Collections.Generic.IEnumerable{System.Type},System.Int32)">
+            <summary>
+            Creates a new RequestValidator targeting a specific set of request types.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"/>
+            <param name="targetTypes">The set of request types the validator can handle.</param>
+            <param name="maxErrors">The maximum number of errors to try and log.</param>
+            <returns>A request validator.</returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.RequestValidatorFactory.GetDefaultValidators(BlastService.Private.ModelContract.Validation.RequestValidator,BlastService.Private.ModelContract.Validation.IValidationSettings)">
+            <summary>
+            Instantiates default validators for the validator list.
+            <param name="owner">The owner of the validators.</param>
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.StringResult.ParentResult">
+            <summary>
+            Gets the parent result.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.StringResult.RootResult">
+            <summary>
+            Gets the root result.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.StringResult.ErrorCount">
+            <summary>
+            Always returns 1 as this is an error result without children.
+            </summary>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.ValidationSettings">
+            <summary>
+            Settings for validation operations.
+            </summary>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.ValidationSettings.MaxErrors">
+            <summary>
+            The maximum errors to be found in validation operations before breaking out.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.ValidatorBase`1.CanValidate(System.Object)">
+            <summary>
+            Gets whether a given object can be validated.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.ValidatorList.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings)">
+            <summary>
+            Constructs a new ValidatorList.
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.ValidatorList.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,System.Collections.Generic.IEnumerable{BlastService.Private.ModelContract.Validation.IValidator})">
+            <summary>
+            Constructs a new ValidatorList with a set of specified validators.
+            </summary>
+            <param name="settings"></param>
+            <param name="validators"></param>
+        </member>
+        <member name="P:BlastService.Private.ModelContract.Validation.ValidatorList.Settings">
+            <summary>
+            The validation settings to be used during validation.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.ValidatorList.Validate(System.Object,BlastService.Private.ModelContract.Validation.IValidatorResult@)">
+            <summary>
+            Validates a single object using the validators stored in this list.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            Thrown if result is an end result node (cannot have children) 
+            or if the object cannot be validated.</exception>
+            <param name="obj">The object to validate.</param>
+            <param name="result">Current validation result node.</param>
+            <returns>True if no errors were found. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.ActualFragmentationValidator">
+            <summary>
+            Class for validating ActualFragmentation objects.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ActualFragmentationValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new ActualFragmentation validator.
+            </summary>
+            <param name="settings">The validation settings to use for validation.</param>
+            <param name="owner">The RequestValidator to attach this to.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ActualFragmentationValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single ActualFragmentation request.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not an ActualFragmentation request.</exception>
+            <param name="result">The list of errors found.</param>
+            <param name="context">The ActualFragmentation to validate.</param>
+            <returns>True if no errors were found thus far. False otherwise.</returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ActualFragmentationValidator.CanValidate(System.Object)">
+            <summary>
+            Evaluates whether an object can be validated by this validator.
+            </summary>
+            <param name="obj">The object to validate.</param>
+            <returns>True if the object can be validated. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.BasePropertyValidator">
+            <summary>
+            A validator for BaseProperty requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.BasePropertyValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new BaseProperty validator with provided settings and
+            the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.BasePropertyValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single BaseProperty request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided object is not a BaseProperty request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The BaseProperty request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.ChargeInfoValidator">
+            <summary>
+            A validator for ChargeInfo requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ChargeInfoValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new ChargeInfo validator with provided settings
+            and owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ChargeInfoValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single ChargeInfo request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a ChargeInfo request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The ChargeInfo request object to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.ChargeIntervalValidator">
+            <summary>
+            A validator for ChargeInterval requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ChargeIntervalValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new ChargeInterval validator with provided settings and
+            the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ChargeIntervalValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single ChargeInterval request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a ChargeInterval request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The ChargeInterval request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.DesignFragmentationValidator">
+            <summary>
+            A validator for DesignFragmentation requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.DesignFragmentationValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new DesignFragmentation validator with provided settings
+            and the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.DesignFragmentationValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single DesignFragmentation request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the context object is not a DesignFragmentation request.</exception>
+            <param name="result">The validation results</param>
+            <param name="context">The DesignFragmentation request to be validated.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.FragmentationValidator">
+            <summary>
+            Base class for Fragmentation validators.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.FragmentationValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new Fragmentation validator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.FragmentationValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single Fragmentation request.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a Fragmentation.</exception>
+            <param name="result">The validator result.</param>
+            <param name="context">The Fragmentation request object to validate.</param>
+            <returns>True if no errors have been found. False otherwise.</returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.FragmentationValidator.ValidateSinglePValue(System.Nullable{System.Double},System.String,BlastService.Private.ModelContract.Validation.NodeResult@)">
+            <summary>
+            Validates a single PValue entry.
+            </summary>
+            <param name="pvalue">The pvalue.</param>
+            <param name="propertyName">The property name of the pvalue's source.</param>
+            <param name="result">The validation results.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.FragmentationValidator.ValidatePValueChain(System.Collections.Generic.List{System.Nullable{System.Double}},System.Collections.Generic.List{System.String},BlastService.Private.ModelContract.Validation.NodeResult@)">
+            <summary>
+            Validates that successive PValues are not less than the previous ones, if not null.
+            </summary>
+            <param name="pvalues">The list of pvalues.</param>
+            <param name="pvalueNames">The names of the pvalues.</param>
+            <param name="result">The validation results.</param>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.GPSCoordinateValidator">
+            <summary>
+            A validator for GPSCoordinate requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.GPSCoordinateValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new GPSCoordinate validator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.GPSCoordinateValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single GPSCoordinate request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a GPSCoordinate request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The GPSCoordinate request to validate.</param>
+            <returns>True if no errors were found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.HoleLengthValidator">
+            <summary>
+            A validator for HoleLength requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.HoleLengthValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new HoleLength validator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.HoleLengthValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single HoleLength request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object was not a HoleLength request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The HoleLength request to validate.</param>
+            <returns>True if no errors were found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.HoleStructureValidator">
+            <summary>
+            A validator for HoleStructure requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.HoleStructureValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new HoleStructure validator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.HoleStructureValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single HoleStructure request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a HoleStructure request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The HoleStructure request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.HoleValidator">
+            <summary>
+            A validator for Hole requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.HoleValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new HoleValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">The RequestValidator that owns this HoleValidator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.HoleValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single HoleRequest request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a HoleRequest.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The HoleRequest request to validate.</param>
+            <returns>True if no errors were found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.LocalTransformationValidator">
+            <summary>
+            A validator for LocalTransformation requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.LocalTransformationValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new LocalTransformation validator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.LocalTransformationValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single LocalTransformation request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context object is not a LocalTransformation request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The LocalTransformation request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.MetricScoreValidator">
+            <summary>
+            A validator for MetricScore requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.MetricScoreValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new MetricScore validator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.MetricScoreValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single MetricScore request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context is not a MetricScore request.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The MetricScore request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.NamedBasePropertyValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single NamedBaseProperty request.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context is not a NamedBaseProperty</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The NamedBaseProperty request to validate.</param>
+            <returns>True if no errors were found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.PatternValidator">
+            <summary>
+            A validator for Pattern requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.PatternValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new Pattern validator with provided settings
+            and the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.PatternValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single PatternRequest object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context is not a PatternRequest.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The PatternRequest object to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.PolyGeomValidator">
+            <summary>
+            A validator for PolyGeom requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.PolyGeomValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new PolyGeom validator with provided settings
+            and the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.PolyGeomValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single PolyGeom object.
+            </summary>
+            <param name="result">The validation results.</param>
+            <param name="context">The PolyGeom request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.ProjectValidator">
+            <summary>
+            A validator for Project requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ProjectValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new Project validator with provided settings
+            and the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ProjectValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single Project request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context is not a ProjectRequest.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The project request to validate.</param>
+            <returns>True if no errors were found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.ScoringValidator">
+            <summary>
+            A validator for Scoring requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ScoringValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new Scoring validator with provided settings
+            and the owning RequestValidator.
+            </summary>
+            <param name="settings"></param>
+            <param name="owner"></param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.ScoringValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single Scoring request
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the context is not a ScoringRequest.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The Scoring request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.TransformationValidator">
+            <summary>
+            A validator for Transformation requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.TransformationValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new Transformation validator with provided settings and
+            the owning RequestValidator.
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.TransformationValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single Transformation request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the context is not a Transformation object.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The Transformation object to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+        <member name="T:BlastService.Private.ModelContract.Validation.Validators.UTCTimeZoneValidator">
+            <summary>
+            A validator for UTCTimeZone requests.
+            </summary>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.UTCTimeZoneValidator.#ctor(BlastService.Private.ModelContract.Validation.IValidationSettings,BlastService.Private.ModelContract.Validation.RequestValidator)">
+            <summary>
+            Instantiates a new UTCTimeZone validator with provided settings
+            and the owning RequestValidator
+            </summary>
+            <param name="settings">Validation settings.</param>
+            <param name="owner">RequestValidator that owns this validator.</param>
+        </member>
+        <member name="M:BlastService.Private.ModelContract.Validation.Validators.UTCTimeZoneValidator.Validate(BlastService.Private.ModelContract.Validation.IValidatorResult@,System.Object)">
+            <summary>
+            Validates a single UTCTimeZone request object.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the provided context is not a UTCTimeZone object.</exception>
+            <param name="result">The validation results.</param>
+            <param name="context">The UTCTimeZone request to validate.</param>
+            <returns>True if there were no errors found thus far. False otherwise.</returns>
+        </member>
+    </members>
+</doc>

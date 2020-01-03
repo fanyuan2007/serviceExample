@@ -1,0 +1,343 @@
+{
+  "nameBasedProperties": {
+    "baseProperties": {
+      "id": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+      "createdAt": "2019-12-10T00:38:41.079Z",
+      "updatedAt": "2019-12-10T00:38:41.079Z"
+    },
+    "name": "test pattern property name"
+  },
+  "stage": "pattern stage",
+  "description": "sample description",
+  "faceAngle": 20,
+  "subDrill": 10,
+  "bench": "sample bench",
+  "pit": "sample pit",
+  "phase": "sample phase",
+  "area": 1,
+  "volume": 2,
+  "holeLength": {
+    "total": 1,
+    "average": 1
+  },
+  "holeUsage": "sample holeUsage",
+  "scoring": {
+    "totalScore": 1,
+    "metricScore": [
+      {
+        "name": "string",
+        "weight": 1,
+        "score": 1
+      }
+    ]
+  },
+  "geologyCode": "code",
+  "patternType": "Drill",
+  "purpose": "testing purpose",
+  "patternTemplateName": "testTemp",
+  "chargingTemplateName": "testCharge",
+  "isElectronic": true,
+  "maxHoleFired": 1,
+  "maxWeightFired": 1,
+  "powderFactor": 0.1,
+  "rockFactor": 0.1,
+  "rockSG": 0.1,
+  "validationState": "Unvalidated",
+  "designFragmentation": {
+    "p10": 0.1,
+    "p20": 0.2,
+    "p30": 0.3,
+    "p40": 0.4,
+    "p50": 0.5,
+    "p60": 0.6,
+    "p70": 0.7,
+    "p80": 0.8,
+    "p90": 0.9
+  },
+  "actualFragmentation": {
+    "p10": 0.1,
+    "p20": 0.2,
+    "p30": 0.3,
+    "p40": 0.4,
+    "p50": 0.5,
+    "p60": 0.6,
+    "p70": 0.7,
+    "p80": 0.8,
+    "p90": 0.9,
+    "topSize": 1.0
+  },
+  "designBoundary": [
+    {
+      "polyGeometry": [
+        {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 10
+        },
+        {
+          "latitude": 10,
+          "longitude": 20,
+          "elevation": 10
+        }
+      ]
+    }
+  ],
+  "actualBoundary": [
+    {
+      "polyGeometry": [
+        {
+          "latitude": 10,
+          "longitude": 20,
+          "elevation": 10
+        },
+        {
+          "latitude": 10,
+          "longitude": 30,
+          "elevation": 10
+        }
+      ]
+    }
+  ],
+  "holes": [
+    {
+      "nameBasedProperties": {
+        "baseProperties": {
+          "id": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+          "createdAt": "2019-12-10T00:38:41.079Z",
+          "updatedAt": "2019-12-10T00:38:41.079Z"
+        },
+        "name": "hole name 1"
+      },
+      "drillPatternId": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+      "blastPatternId": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+      "areaOfInfluence": 1,
+      "volumeOfInfluence": 2,
+      "holeState": "hole state",
+      "holeUsage": "hole usage",
+      "layoutType": "hole type",
+      "designDiameter": 1,
+      "designBenchCollar": 1,
+      "designBenchToe": 1,
+      "designSubDrill": 1,
+      "accuracy": 1,
+      "lengthAccuracy": 1,
+      "designChargeInfo": {
+        "weight": 1,
+        "thickness": 1
+      },
+      "actualChargeInfo": {
+        "weight": 1,
+        "thickness": 1
+      },
+      "chargeTemplateName": "templateName",
+      "fragmentSize": 2,
+      "powderFactor": 1,
+      "geologyCode": "code",
+      "validationState": "Unvalidated",
+      "actualFragmentation": {
+        "p10": 0.1,
+        "p20": 0.2,
+        "p30": 0.3,
+        "p40": 0.4,
+        "p50": 0.5,
+        "p60": 0.6,
+        "p70": 0.7,
+        "p80": 0.8,
+        "p90": 0.9,
+        "topSize": 1.0
+      },
+      "designChargeProfile": [
+        {
+          "from": 1.0,
+          "to": 2.0,
+          "consumable": "consumable",
+          "amount": 1,
+          "deck": "deck"
+        }
+      ],
+      "actualChargeProfile": [
+        {
+          "from": 1.1,
+          "to": 2.1,
+          "consumable": "consumable",
+          "amount": 1,
+          "deck": "actual deck"
+        }
+      ],
+      "designHole": {
+        "azimuth": 10,
+        "dip": 10,
+        "length": 10,
+        "collar": {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        },
+        "toe": {
+          "latitude": 10,
+          "longitude": 20,
+          "elevation": 20
+        }
+      },
+      "actualHole": {
+        "azimuth": 20,
+        "dip": 20,
+        "length": 10,
+        "collar": {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        },
+        "toe": {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        }
+      },
+      "designTrace": [
+        {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 10
+        },
+        {
+          "latitude": 10,
+          "longitude": 20,
+          "elevation": 10
+        }
+      ],
+      "actualTrace": [
+        {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        },
+        {
+          "latitude": 10,
+          "longitude": 20,
+          "elevation": 10
+        }
+      ]
+    },
+    {
+      "nameBasedProperties": {
+        "baseProperties": {
+          "id": "dc15bfee-85fc-47d2-9b48-38b7dce91ffc",
+          "createdAt": "2019-12-10T00:38:41.080Z",
+          "updatedAt": "2019-12-10T00:38:41.080Z"
+        },
+        "name": "hole name 2"
+      },
+      "drillPatternId": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+      "blastPatternId": "dc15bfee-85fc-47d2-9b48-38b7dce91ffb",
+      "areaOfInfluence": 1,
+      "volumeOfInfluence": 2,
+      "holeState": "hole state",
+      "holeUsage": "hole usage",
+      "layoutType": "hole type",
+      "designDiameter": 1,
+      "designBenchCollar": 1,
+      "designBenchToe": 1,
+      "designSubDrill": 1,
+      "accuracy": 1,
+      "lengthAccuracy": 1,
+      "designChargeInfo": {
+        "weight": 1,
+        "thickness": 1
+      },
+      "actualChargeInfo": {
+        "weight": 1,
+        "thickness": 1
+      },
+      "chargeTemplateName": "templateName",
+      "fragmentSize": 2,
+      "powderFactor": 1,
+      "geologyCode": "code",
+      "validationState": "Unvalidated",
+      "actualFragmentation": {
+        "p10": 0.1,
+        "p20": 0.2,
+        "p30": 0.3,
+        "p40": 0.4,
+        "p50": 0.5,
+        "p60": 0.6,
+        "p70": 0.7,
+        "p80": 0.8,
+        "p90": 0.9,
+        "topSize": 1.0
+      },
+      "designChargeProfile": [
+        {
+          "from": 1.0,
+          "to": 2.0,
+          "consumable": "consumable",
+          "amount": 1,
+          "deck": "deck"
+        }
+      ],
+      "actualChargeProfile": [
+        {
+          "from": 1.1,
+          "to": 2.1,
+          "consumable": "consumable",
+          "amount": 1,
+          "deck": "actual deck"
+        }
+      ],
+      "designHole": {
+        "azimuth": 10,
+        "dip": 10,
+        "length": 10,
+        "collar": {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        },
+        "toe": {
+          "latitude": 10,
+          "longitude": 20,
+          "elevation": 20
+        }
+      },
+      "actualHole": {
+        "azimuth": 20,
+        "dip": 20,
+        "length": 10,
+        "collar": {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        },
+        "toe": {
+          "latitude": 10,
+          "longitude": 10,
+          "elevation": 20
+        }
+      },
+      "designTrace": [
+        {
+          "latitude": 20,
+          "longitude": 10,
+          "elevation": 10
+        },
+        {
+          "latitude": 20,
+          "longitude": 20,
+          "elevation": 10
+        }
+      ],
+      "actualTrace": [
+        {
+          "latitude": 20,
+          "longitude": 10,
+          "elevation": 20
+        },
+        {
+          "latitude": 20,
+          "longitude": 20,
+          "elevation": 10
+        }
+      ]
+    }
+  ]
+}

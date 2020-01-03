@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package >
+  <!--
+    Any nuget reference you add will be included in the nuget package as a dependency without you
+    having to add it in here.
+     
+    For more info on how to compose a nuspec file see http://docs.nuget.org/create/nuspec-reference
+    -->
+
+  <metadata>
+    <id>BlastService.Private.ModelContract</id>
+    <!-- This will use the AssemblyVersion -->
+    <version>$version$</version>
+    <title>MinePlan Blast Private Service Contract</title>
+    <description>MinePlan Blast Private Service Contract</description>
+    <authors>Hexagon Mining</authors>
+    <owners>Hexagon Mining</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>MinePlan Blast Private Service Contract</releaseNotes>
+    <copyright>Copyright © 2019, Leica Geosystems Inc.</copyright>
+    <tags></tags>
+  </metadata>
+</package>
